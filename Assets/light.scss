@@ -10,7 +10,17 @@ $border1: 1px dotted #555;
 
 
 
+// icons
 
+.icon-menu {
+    background-image: url('./icons/bars-solid-light.svg');
+    background-size: contain;
+}
+
+.icon-home {
+    background-image: url('./icons/house-solid-light.svg');
+    background-size: contain;
+}
 
 // Classes : ****************************************************
 

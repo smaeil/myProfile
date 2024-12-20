@@ -1,3 +1,13 @@
+.icon-menu {
+  background-image: url("./icons/bars-solid-light.svg");
+  background-size: contain;
+}
+
+.icon-home {
+  background-image: url("./icons/house-solid-light.svg");
+  background-size: contain;
+}
+
 .dropdown .dropdown-content {
   background-color: #ffffff;
   border: 1px dotted #555;
