@@ -1,1 +1,28 @@
-// colors : *****************************************************
+// Colors : *****************************************************
+
+// colors:
+$primary: #000;
+$bg: #ffffff;
+
+
+// borders:
+$border1: 1px dotted #555;
+
+
+
+
+
+// Classes : ****************************************************
+
+.dropdown {
+    .dropdown-content {
+        background-color: $bg;
+        border: $border1;
+        a {
+            &:hover {
+                color: $bg;
+                background-color: $primary;
+            }
+        }
+    }
+}

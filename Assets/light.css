@@ -1,1 +1,8 @@
-/*# sourceMappingURL=light.css.map */
+.dropdown .dropdown-content {
+  background-color: #ffffff;
+  border: 1px dotted #555;
+}
+.dropdown .dropdown-content a:hover {
+  color: #ffffff;
+  background-color: #000;
+}/*# sourceMappingURL=light.css.map */
