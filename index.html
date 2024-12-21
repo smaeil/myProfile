@@ -27,19 +27,19 @@
 
                     <div class="dropdown-content" id="nav-dropdown">
 
-                        <a >
+                        <a onclick="getPage('about-me')">
                             <h3>About Me</h3>
                         </a>
 
-                        <a >
+                        <a onclick="getPage('skills')">
                             <h3>Skills</h3>
                         </a>
 
-                        <a >
+                        <a onclick="getPage('projects')">
                             <h3>Projects</h3>
                         </a>
 
-                        <a >
+                        <a onclick="getPage('contact')">
                             <h3>Contact</h3> 
                         </a>
 
@@ -61,8 +61,8 @@
         <div class="container">
             <div></div>
             <div class="content-holder">
-                <h1>Home</h1>
-                <h2>Subtitle for home</h2>
+                <h1>Ismail Ahmadi</h1>
+                <h2>Full Stack Webdeveloper</h2>
 
             </div>
             <a onclick="getPage('about-me')"><div class="go-down"></div></a>
@@ -75,7 +75,16 @@
             <a onclick="getPage('home')"><div class="go-up"></div></a>
 
             <div class="content-holder">
-                <h1>About Me</h1>
+                <h2>About Me</h2>
+                <br>
+                <p>
+                    Full-stack web developer with near 9 years of experience in database and humanitarian data collection management.
+                      Seeking a new challenge to integrate, apply, and advance knowledge from both database and web development in. a solution-oriented manner.
+                </p>
+
+                <h4>Education: Civil Engineering</h4>
+                <h4>Location: Baden Württemberg, Germany</h4>
+
             </div>
 
             <a onclick="getPage('skills')"><div class="go-down"></div></a>
@@ -88,7 +97,7 @@
             <a onclick="getPage('about-me')"><div class="go-up"></div></a>
 
             <div class="content-holder">
-                <h1>Skills</h1>
+                <h2>Skills</h2>
                 here I show my skill with graphic and animation
             </div>
 
@@ -102,7 +111,7 @@
             <a onclick="getPage('skills')"><div class="go-up"></div></a>
 
             <div class="content-holder">
-                <h1>Projects</h1>
+                <h2>Projects</h2>
                 My project will be projected here
             </div>
 
@@ -116,12 +125,18 @@
             <a onclick="getPage('projects')"><div class="go-up"></div></a>
 
             <div class="content-holder">
-                <h1>Contact</h1>
+                <h2>Contact</h2>
             </div>
 
             <div></div>
         </div>
     </section>
+
+
+    <!-- sound effects -->
+     <audio id="flip-card" controls>
+        <source src="./Assets/sounds/card-flip-s.m4a" type="audio/mp4">
+     </audio>
 
 
     <script src="./Assets/main.js" async defer></script>

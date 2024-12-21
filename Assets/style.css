@@ -27,6 +27,10 @@ a:link {
   color: inherit;
 }
 
+h1 {
+  font-size: 3rem;
+}
+
 nav {
   position: fixed;
   top: 0;

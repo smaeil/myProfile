@@ -1,10 +1,12 @@
 // Global Variables and objects: ********************************************
 
 const navDropDown = document.querySelector('#nav-dropdown');
-const pagesCollection = document.querySelectorAll('.page')
+const pagesCollection = document.querySelectorAll('.page');
 const pages = Array.from(pagesCollection);
 let currentPageIndex = 0;
 
+// sounds:
+const flipCard = document.querySelector('#flip-card');
 
 
 
@@ -32,6 +34,7 @@ function toggleDropdown() {
 
 async function getPage(pageId) {
     try {
+        flipCard.volume = 0.2;
         const targetPage = document.querySelector(`#${pageId}`);
         const targetPageIndex = pages.indexOf(targetPage);
         
@@ -51,6 +54,9 @@ async function getPage(pageId) {
                 nextPage.classList.add('top');
                 nextPage.classList.add('cover');
                 nextPage.classList.remove('hide');
+
+                // playing the sound
+                flipCard.play();
     
                 await delay(401);
                 currentPage.classList.add('hide');
@@ -74,6 +80,9 @@ async function getPage(pageId) {
                 nextPage.classList.add('top');
                 nextPage.classList.add('uncover');
                 nextPage.classList.remove('hide');
+
+                // playing the sound
+                flipCard.play();
     
                 await delay(401);
                 currentPage.classList.add('hide');

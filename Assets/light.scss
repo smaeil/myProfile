@@ -5,6 +5,7 @@ $primary: #000;
 $secondary: #888;
 $bg: #ffffff;
 $accent: rgb(179, 19, 19);
+$nav: #c1c1c1;
 
 
 // borders:
@@ -27,7 +28,7 @@ $border1: 1px dashed $secondary;
 // Elements: ***************************************************
 
 nav {
-    background-color: #ffffffbd;
+    background-color: $nav;
 }
 
 
@@ -54,7 +55,7 @@ nav {
 
 .page {
     background-color: $bg;
-    border: 0.1rem dashed $primary;
+    border: 0.1rem solid $secondary;
     box-shadow: -0.1rem -0.1rem 1rem $primary;
 }
 

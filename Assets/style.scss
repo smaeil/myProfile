@@ -17,9 +17,6 @@ html {
     scroll-behavior: smooth;
 }
 
-// body {
-//     transition: transform 0.4s ease;
-// }
 
 // all links:
 a {
@@ -38,6 +35,11 @@ a {
     &:link {
         color: inherit;
     }
+}
+
+// headings:
+h1 {
+    font-size: 3rem;
 }
 
 // lengths: 
@@ -160,7 +162,7 @@ nav {
 }
 
 
-
+// navigations
 .go-down, .go-up {
     width: $icon1;
     height: $icon1;
