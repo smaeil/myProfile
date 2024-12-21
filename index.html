@@ -11,10 +11,10 @@
 <body>
 
     <!-- Navbar and all of its components -->
-    <nav class="flex">
+    <nav>
         <div class="container flex justify-between">
             <div>
-                <a>
+                <a onclick="getPage('home')">
                     <div class="icon icon-home"></div>
                 </a>
             </div>
@@ -28,15 +28,19 @@
                     <div class="dropdown-content" id="nav-dropdown">
 
                         <a >
-                            <h3 class="m">Projects</h3>
+                            <h3>About Me</h3>
                         </a>
 
                         <a >
-                            <h3 class="m">About Me</h3>
+                            <h3>Skills</h3>
                         </a>
 
                         <a >
-                            <h3 class="m">Contact</h3> 
+                            <h3>Projects</h3>
+                        </a>
+
+                        <a >
+                            <h3>Contact</h3> 
                         </a>
 
                     </div>
@@ -45,39 +49,77 @@
                 <h3>Language</h3>
             </div>
         </div>
+        <div id="scroll-spy-container">
+            <div id="scroll-spy"></div>
+        </div>
     </nav>
 
     <!-- Pages: *********************** -->
 
+    <!-- Home -->
     <section id="home" class="page">
         <div class="container">
-            <h1>Home</h1>
+            <div></div>
+            <div class="content-holder">
+                <h1>Home</h1>
+                <h2>Subtitle for home</h2>
+
+            </div>
+            <a onclick="getPage('about-me')"><div class="go-down"></div></a>
         </div>
     </section>
 
-    <section id="about-me" class="page">
+    <!-- About Me -->
+    <section id="about-me" class="page hide">
         <div class="container">
-            <h1>About Me</h1>
+            <a onclick="getPage('home')"><div class="go-up"></div></a>
+
+            <div class="content-holder">
+                <h1>About Me</h1>
+            </div>
+
+            <a onclick="getPage('skills')"><div class="go-down"></div></a>
         </div>
     </section>
     
-    <section id="skills" class="page">
+    <!-- Skills -->
+    <section id="skills" class="page hide">
         <div class="container">
-            <h1>Skills</h1>
-            here I show my skill with graphic and animation
+            <a onclick="getPage('about-me')"><div class="go-up"></div></a>
+
+            <div class="content-holder">
+                <h1>Skills</h1>
+                here I show my skill with graphic and animation
+            </div>
+
+            <a onclick="getPage('projects')"><div class="go-down"></div></a>
         </div>
     </section>
     
-    <section id="projects" class="page">
+    <!-- Projects -->
+    <section id="projects" class="page hide">
         <div class="container">
-            <h1>Projects</h1>
-            My project will be projected here
+            <a onclick="getPage('skills')"><div class="go-up"></div></a>
+
+            <div class="content-holder">
+                <h1>Projects</h1>
+                My project will be projected here
+            </div>
+
+            <a onclick="getPage('contact')"><div class="go-down"></div></a>
         </div>
     </section>
 
-    <section id="contact" class="page">
+    <!-- Contacts -->
+    <section id="contact" class="page hide">
         <div class="container">
-            <h1>Contact</h1>
+            <a onclick="getPage('projects')"><div class="go-up"></div></a>
+
+            <div class="content-holder">
+                <h1>Contact</h1>
+            </div>
+
+            <div></div>
         </div>
     </section>
 

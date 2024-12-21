@@ -8,11 +8,42 @@
   background-size: contain;
 }
 
+nav {
+  background-color: rgba(255, 255, 255, 0.7411764706);
+}
+
 .dropdown .dropdown-content {
   background-color: #ffffff;
-  border: 1px dotted #555;
+  border: 1px dashed #888;
+  box-shadow: 0.2rem 0.2rem 0.5rem #000;
 }
 .dropdown .dropdown-content a:hover {
   color: #ffffff;
   background-color: #000;
+}
+
+#scroll-spy {
+  background-color: rgb(179, 19, 19);
+  box-shadow: 0 0 0.1rem rgb(179, 19, 19);
+}
+
+.page {
+  background-color: #ffffff;
+  border: 0.1rem dashed #000;
+  box-shadow: -0.1rem -0.1rem 1rem #000;
+}
+
+.go-down {
+  background: url("./icons/chevron-down-solid-light.svg");
+}
+
+.go-up {
+  background: url("./icons/chevron-up-solid-light.svg");
+}
+
+.go-down, .go-up {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }/*# sourceMappingURL=light.css.map */

@@ -13,6 +13,14 @@
     // border: 1px dashed red;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+// body {
+//     transition: transform 0.4s ease;
+// }
+
 // all links:
 a {
     text-decoration: none;
@@ -42,7 +50,8 @@ $icon1: 1.9rem;
 nav {
     position: fixed;
     top: 0; left: 0; right: 0;
-    background-color: yellow;
+    backdrop-filter: blur(0.3rem);
+    z-index: 99;
 
     div > h3 {
         padding: 0.5rem;
@@ -58,7 +67,7 @@ nav {
 
 // classes : ***************************************************
 
-.container {
+.container, #scroll-spy-container {
     width: 80vw;
     margin: auto;
 }
@@ -103,7 +112,7 @@ nav {
         position: absolute;
         flex-direction: column;
         border-radius: 0.3rem;
-        transition-duration: 0.5s;
+        transition-duration: 1s;
 
         a {
             padding: 0.7rem 2.2rem;
@@ -111,7 +120,19 @@ nav {
     }
 }
 
+// Scroll Spy: 
+#scroll-spy-container {
+    height: 0.2rem;
+    border-radius: 1rem;
+    overflow:visible;
+}
 
+#scroll-spy {
+    height: 100%;
+    width: 0%;
+    box-sizing: border-box;
+    transition: 0.4s ease-in-out;
+}
 
 
 
@@ -119,9 +140,49 @@ nav {
 .page {
     width: 100vw;
     height: 100vh;
-    border: 1px dotted black;
+    padding-top: 8rem;
+    padding-bottom: 6rem;
+    box-sizing: border-box;
+    position: fixed;
+    z-index: 1;
+
+    .container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        a {
+            display: block;
+            align-self: center;
+        }
+    }
 }
 
+
+
+.go-down, .go-up {
+    width: $icon1;
+    height: $icon1;
+    animation: breath 2s ease-in-out 0s infinite alternate none;
+}
+
+
+.hide {
+    display: none !important;
+}
+
+.cover {
+    animation: pageCover 0.5s ease-in-out 0s 1 normal none;
+}
+
+.uncover {
+    animation: pageCover 0.5s ease-in-out 0s 1 reverse none;    
+}
+
+.top {
+    z-index: 5 !important;
+}
 
 // Interface: **************************************************
 
@@ -130,10 +191,19 @@ nav {
 // Animations: ********************************************************************************************
 
 @keyframes menu-fade-down {
-    from {opacity: 0.2; transform: translateY(-1rem);}
+    from {opacity: 0.2; transform: translateY(-0.5rem);}
     to {opacity: 1; transform: translateY(0rem);}
 }
 
+@keyframes breath {
+    from {transform: translatey(-1rem);}
+    to {transform: translatey(0rem);}
+}
+
+@keyframes pageCover {
+    from {transform: translateY(100vh) rotate(10deg);}
+    to {transform: translateY(0) rotate(0deg);}
+}
 
 
 // Media: ***********************************************************************************************************
@@ -182,6 +252,7 @@ nav {
             // coloring will be reseted
             background-color: transparent !important;
             border: none !important;
+            box-shadow: none !important;
 
             a {
                 padding: 1rem 0.6rem;

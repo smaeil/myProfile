@@ -2,11 +2,13 @@
 
 // colors:
 $primary: #000;
+$secondary: #888;
 $bg: #ffffff;
+$accent: rgb(179, 19, 19);
 
 
 // borders:
-$border1: 1px dotted #555;
+$border1: 1px dashed $secondary;
 
 
 
@@ -22,12 +24,20 @@ $border1: 1px dotted #555;
     background-size: contain;
 }
 
+// Elements: ***************************************************
+
+nav {
+    background-color: #ffffffbd;
+}
+
+
 // Classes : ****************************************************
 
 .dropdown {
     .dropdown-content {
         background-color: $bg;
         border: $border1;
+        box-shadow: 0.2rem 0.2rem 0.5rem $primary;
         a {
             &:hover {
                 color: $bg;
@@ -36,3 +46,31 @@ $border1: 1px dotted #555;
         }
     }
 }
+
+#scroll-spy {
+    background-color: $accent;
+    box-shadow: 0 0 0.1rem $accent;
+}
+
+.page {
+    background-color: $bg;
+    border: 0.1rem dashed $primary;
+    box-shadow: -0.1rem -0.1rem 1rem $primary;
+}
+
+.go-down {
+    background: url('./icons/chevron-down-solid-light.svg');
+}
+
+.go-up {
+    background: url('./icons/chevron-up-solid-light.svg');
+}
+
+
+.go-down, .go-up {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position: center;
+}
+
