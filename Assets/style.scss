@@ -100,6 +100,14 @@ nav {
     margin: 1rem;
 }
 
+.profile-photo {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    margin-top: 0.4rem;
+    position: absolute;
+}
+
 
 // dropdowns:
 
@@ -126,6 +134,8 @@ nav {
 #scroll-spy-container {
     height: 0.2rem;
     border-radius: 1rem;
+    width: 75vw;
+    margin: auto;
     overflow:visible;
 }
 
@@ -133,7 +143,7 @@ nav {
     height: 100%;
     width: 0%;
     box-sizing: border-box;
-    transition: 0.4s ease-in-out;
+    transition: 0.25s ease-in-out;
 }
 
 
@@ -186,9 +196,14 @@ nav {
     z-index: 5 !important;
 }
 
-// Interface: **************************************************
+// helper: **************************************************
 
-
+.dummy-scroll {
+    position: absolute;
+    z-index: -10;
+    width: 100vw;
+    height: 110vh;
+}
 
 // Animations: ********************************************************************************************
 
@@ -216,6 +231,10 @@ nav {
     :root {
         font-size: 12px;
     }
+
+    .profile-photo {
+        margin-top: 0.5rem !important;
+    }
     
 }
 
@@ -224,6 +243,10 @@ nav {
     // base font size
     :root {
         font-size: 14px;
+    }
+
+    .profile-photo {
+        margin-top: 1rem;
     }
 }
 
@@ -235,10 +258,14 @@ nav {
     }
 
     // navbar:
-    
     nav {
         div > h3 {
             padding: 1rem;
+        }
+
+        div > .profile-photo {
+            margin-top: 2rem !important;
+            position: absolute;
         }
     }
     .dropdown {
@@ -261,6 +288,8 @@ nav {
             }
         }
     }
+
+
 }
 
 // very large screens

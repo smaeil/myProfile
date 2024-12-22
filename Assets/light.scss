@@ -5,7 +5,7 @@ $primary: #000;
 $secondary: #888;
 $bg: #ffffff;
 $accent: rgb(179, 19, 19);
-$nav: #c1c1c1;
+$nav: #bccbc6;
 
 
 // borders:
@@ -23,6 +23,10 @@ $border1: 1px dashed $secondary;
 .icon-home {
     background-image: url('./icons/house-solid-light.svg');
     background-size: contain;
+}
+
+.profile-photo {
+    border: 0.2rem solid $accent;
 }
 
 // Elements: ***************************************************

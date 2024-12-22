@@ -8,8 +8,12 @@
   background-size: contain;
 }
 
+.profile-photo {
+  border: 0.2rem solid rgb(179, 19, 19);
+}
+
 nav {
-  background-color: #c1c1c1;
+  background-color: #bccbc6;
 }
 
 .dropdown .dropdown-content {
