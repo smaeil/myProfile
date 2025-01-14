@@ -28,12 +28,18 @@ function toggleDropdown() {
 // Language Change:
 
 
-    // recalling the lang from local storage:
+// recalling the lang from local storage:
 
 // navigation: *************************************************
 
+let inMove = false;
 async function getPage(pageId) {
     try {
+
+        // checks if the page is in move deactivate the function 
+        if (inMove) return;
+        inMove = true;
+
         if (!pageId) {
             return;
         }
@@ -72,6 +78,10 @@ async function getPage(pageId) {
                 // updating scroll spy
                 document.querySelector('#scroll-spy').style.width = `${currentPageIndex * 25}%`;
 
+
+                // resetting the inMove
+                inMove = false;
+
                 // updating the history ???
             }
         } else {
@@ -98,12 +108,16 @@ async function getPage(pageId) {
                 // updating scroll spy
                 document.querySelector('#scroll-spy').style.width = `${currentPageIndex * 25}%`;
 
+                //resetting the inMove
+                inMove = false;
+
                 // updating the history ???
             }
     
         }
     } catch (error) {
         console.log(error);
+        inMove = false;
     }
 }
 
@@ -128,68 +142,3 @@ window.addEventListener('click', e => {
     }
 });
 
-let prevScrollY = window.scrollY;
-let inScroll = false;
-let scrollDump = 0;
-
-async function autoCenter() {
-        //other scroll properties:
-        const scrollHeight = window.innerHeight;
-        const documentHeight = document.documentElement.scrollHeight;
-        const middlePoint = Math.round(Math.abs(documentHeight - scrollHeight) / 2);
-
-        await delay(200);
-        
-        window.scrollTo({
-            top: middlePoint,
-            behavior: 'smooth'
-        });
-}
-
-window.addEventListener('scroll',async () => {
-    try {
-        const nextPageId = pagesCollection.length < currentPageIndex ? 'home' : pagesCollection[currentPageIndex + 1].id;
-        const prevPageId = currentPageIndex <= 0 ? 'contact' : pagesCollection[currentPageIndex - 1].id;
-
-        const currentScrollY = window.scrollY;
-        const direction = currentScrollY > prevScrollY ? 'up' : 'down';
-        
-        if (inScroll) {
-            autoCenter();
-            return;
-        };
-
-        if (direction === 'up') {
-            if (!nextPageId) {
-                autoCenter();
-                return;
-            } ;
-    
-            inScroll = true;
-            await delay(500);
-            
-            autoCenter();
-            scrollDump++;
-
-            if (scrollDump >= 2) {
-                scrollDump = 0;
-                console.log(nextPageId);
-                getPage(nextPageId);
-
-            }
-            inScroll = false;
-    
-        } else {
-            // await delay(200);
-    
-            // console.log(prevPageId);
-            // if(!prevPageId) return;
-            // getPage(prevPageId);
-        }
-    
-        prevScrollY = currentScrollY;
-        
-    } catch (error) {
-        console.log(error);
-    }
-});
