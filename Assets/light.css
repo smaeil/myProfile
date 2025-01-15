@@ -9,30 +9,53 @@
 }
 
 .profile-photo {
-  border: 0.2rem solid rgb(179, 19, 19);
+  border: 1px solid #000;
+}
+
+.profile-photo-shadow {
+  border: 1px solid #000;
+  background: repeating-linear-gradient(-45deg, #f4f6ff 0rem, #f4f6ff 0.3rem, #888 0.3rem, #888 0.4rem);
+  background-size: 50px 50px;
 }
 
 nav {
-  background-color: #bccbc6;
+  background-color: #f4f6ff;
+}
+
+h1 {
+  color: #000;
+}
+
+h2 {
+  color: #6d2323;
 }
 
 .dropdown .dropdown-content {
-  background-color: #ffffff;
+  background-color: #f4f6ff;
   border: 1px dashed #888;
   box-shadow: 0.2rem 0.2rem 0.5rem #000;
 }
 .dropdown .dropdown-content a:hover {
-  color: #ffffff;
+  color: #f4f6ff;
   background-color: #000;
 }
 
+#scroll-spy-container {
+  border-bottom: 1px solid #000;
+  border-right: 1px solid #000;
+  border-left: 1px solid #000;
+}
+
 #scroll-spy {
-  background-color: rgb(179, 19, 19);
-  box-shadow: 0 0 0.1rem rgb(179, 19, 19);
+  background-color: #ff1d1d;
+}
+
+.interval {
+  border-right: 1px solid #000;
 }
 
 .page {
-  background-color: #ffffff;
+  background-color: #f4f6ff;
   border: 0.1rem solid #888;
   box-shadow: -0.1rem -0.1rem 1rem #000;
 }

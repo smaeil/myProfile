@@ -30,6 +30,25 @@ function toggleDropdown() {
 
 // recalling the lang from local storage:
 
+
+// on load:
+
+function onLoad() {
+
+    // setting up the ruler:
+    const width = 100;
+    const ruler = document.querySelector('#ruler');
+
+    for(let i = 0; i < width; i++) {
+        const newDiv = document.createElement('div');
+        newDiv.classList.add('interval');
+        ruler.appendChild(newDiv);
+    }
+
+}
+
+onLoad();
+
 // navigation: *************************************************
 
 let inMove = false;
@@ -93,10 +112,10 @@ async function getPage(pageId) {
                 nextPage.classList.add('top');
                 nextPage.classList.add('uncover');
                 nextPage.classList.remove('hide');
-
+                
                 // playing the sound
                 flipCard.play();
-    
+                
                 await delay(401);
                 currentPage.classList.add('hide');
                 nextPage.classList.remove('uncover');
@@ -115,6 +134,8 @@ async function getPage(pageId) {
             }
     
         }
+
+        inMove = false;
     } catch (error) {
         console.log(error);
         inMove = false;

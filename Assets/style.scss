@@ -103,8 +103,15 @@ nav {
 .profile-photo {
     height: 4rem;
     width: 4rem;
-    border-radius: 50%;
     margin-top: 0.4rem;
+    position: absolute;
+}
+
+.profile-photo-shadow {
+    height: 4rem;
+    width: 4rem;
+    margin-top: 1.4rem;
+    margin-left: 1rem;
     position: absolute;
 }
 
@@ -145,6 +152,25 @@ nav {
     box-sizing: border-box;
     transition: 0.25s ease-in-out;
 }
+
+#ruler {
+    width: 75vw;
+    margin: auto;
+}
+
+.interval {
+    width: 0.1rem;
+    height: 0.4rem;
+
+    &:nth-child(2n) {
+        height: 0.6rem;
+    }
+    
+    &:nth-child(5n) {
+        height: 1rem;
+    }
+}
+
 
 
 

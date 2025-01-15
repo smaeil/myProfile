@@ -3,12 +3,14 @@
 // colors:
 $primary: #000;
 $secondary: #888;
-$bg: #ffffff;
-$accent: rgb(179, 19, 19);
-$nav: #bccbc6;
+$bg: #f4f6ff;
+$accent: #6d2323;
+$tread: #ff1d1d;
+$nav: $bg;
 
 
 // borders:
+$border0: 1px solid $primary;
 $border1: 1px dashed $secondary;
 
 
@@ -26,13 +28,26 @@ $border1: 1px dashed $secondary;
 }
 
 .profile-photo {
-    border: 0.2rem solid $accent;
+    border: $border0;
+}
+.profile-photo-shadow {
+    border: $border0;
+    background: repeating-linear-gradient(-45deg, $bg 0rem, $bg 0.3rem, $secondary 0.3rem, $secondary 0.4rem);
+    background-size: 50px 50px;
 }
 
 // Elements: ***************************************************
 
 nav {
     background-color: $nav;
+}
+
+h1 {
+    color: $primary;
+}
+
+h2 {
+    color: $accent;
 }
 
 
@@ -52,9 +67,17 @@ nav {
     }
 }
 
+#scroll-spy-container {
+    border-bottom: $border0;
+    border-right: $border0;
+    border-left: $border0;
+}
 #scroll-spy {
-    background-color: $accent;
-    box-shadow: 0 0 0.1rem $accent;
+    background-color: $tread;
+}
+
+.interval {
+    border-right: $border0;
 }
 
 .page {
