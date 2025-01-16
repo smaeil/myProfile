@@ -1,0 +1,6 @@
+$primary: #000;
+$secondary: #888;
+$bg: #f4f6ff;
+$accent: #8d99ae;
+$tread: #ef233c;
+$nav: $bg;

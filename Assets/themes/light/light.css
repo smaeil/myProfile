@@ -1,11 +1,10 @@
 .icon-menu {
-  background-image: url("./icons/bars-solid-light.svg");
+  background-image: url("./icons/bars-solid.svg");
   background-size: contain;
 }
 
 .icon-home {
-  background-image: url("./icons/house-solid-light.svg");
-  background-size: contain;
+  background-image: url("./icons/house-solid.svg");
 }
 
 .profile-photo {
@@ -14,40 +13,44 @@
 
 .profile-photo-shadow {
   border: 1px solid #000;
-  background: repeating-linear-gradient(-45deg, #f4f6ff 0rem, #f4f6ff 0.3rem, #888 0.3rem, #888 0.4rem);
+  background-color: #f77f00;
   background-size: 50px 50px;
 }
 
 nav {
-  background-color: #f4f6ff;
+  background-color: #fff;
 }
 
-h1 {
+h1, h3 {
   color: #000;
 }
 
 h2 {
-  color: #6d2323;
+  color: #d62828;
 }
 
 .dropdown .dropdown-content {
-  background-color: #f4f6ff;
-  border: 1px dashed #888;
+  background-color: #fff;
+  border: 1px dashed #000;
   box-shadow: 0.2rem 0.2rem 0.5rem #000;
 }
 .dropdown .dropdown-content a:hover {
-  color: #f4f6ff;
   background-color: #000;
+}
+.dropdown .dropdown-content a:hover h3 {
+  color: #fff;
+  font-weight: 600;
 }
 
 #scroll-spy-container {
   border-bottom: 1px solid #000;
   border-right: 1px solid #000;
   border-left: 1px solid #000;
+  box-shadow: 0 0.7rem 0.8rem rgba(0, 0, 0, 0.2);
 }
 
 #scroll-spy {
-  background-color: #ff1d1d;
+  background-color: #003049;
 }
 
 .interval {
@@ -55,17 +58,17 @@ h2 {
 }
 
 .page {
-  background-color: #f4f6ff;
-  border: 0.1rem solid #888;
+  background-color: #fff;
+  border: 0.1rem solid #d62828;
   box-shadow: -0.1rem -0.1rem 1rem #000;
 }
 
 .go-down {
-  background: url("./icons/chevron-down-solid-light.svg");
+  background: url("./icons/chevron-down-solid.svg");
 }
 
 .go-up {
-  background: url("./icons/chevron-up-solid-light.svg");
+  background: url("./icons/chevron-up-solid.svg");
 }
 
 .go-down, .go-up {

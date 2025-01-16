@@ -36,7 +36,8 @@ function toggleDropdown() {
 function onLoad() {
 
     // setting up the ruler:
-    const width = 100;
+    const width = Math.round(window.innerWidth / 15) ;
+    // const width = 140;
     const ruler = document.querySelector('#ruler');
 
     for(let i = 0; i < width; i++) {
@@ -62,6 +63,16 @@ async function getPage(pageId) {
         if (!pageId) {
             return;
         }
+
+        const homeBtn = document.querySelector('#home-btn');
+
+        if (pageId === 'home') {
+            homeBtn.classList.add('hide');
+        } else {
+            homeBtn.classList.remove('hide');
+        }
+
+
         flipCard.volume = 0.2;
         const targetPage = document.querySelector(`#${pageId}`);
         const targetPageIndex = pages.indexOf(targetPage);
@@ -162,4 +173,9 @@ window.addEventListener('click', e => {
         navDropDown.classList.remove('flex');
     }
 });
+
+// a small interval for fixing things
+setInterval(() => {
+    inMove = false;
+},1000);
 

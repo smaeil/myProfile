@@ -2,29 +2,29 @@
 
 // colors:
 $primary: #000;
-$secondary: #888;
-$bg: #f4f6ff;
-$accent: #6d2323;
-$tread: #ff1d1d;
+$secondary: #d62828;
+$bg: #fff;
+$accent: #f77f00;
+$tread: #003049;
+$shadow: #00000033;
 $nav: $bg;
 
 
 // borders:
 $border0: 1px solid $primary;
-$border1: 1px dashed $secondary;
+$border1: 1px dashed $primary;
 
 
 
 // icons
 
 .icon-menu {
-    background-image: url('./icons/bars-solid-light.svg');
+    background-image: url('./icons/bars-solid.svg');
     background-size: contain;
 }
 
 .icon-home {
-    background-image: url('./icons/house-solid-light.svg');
-    background-size: contain;
+    background-image: url('./icons/house-solid.svg');
 }
 
 .profile-photo {
@@ -32,7 +32,8 @@ $border1: 1px dashed $secondary;
 }
 .profile-photo-shadow {
     border: $border0;
-    background: repeating-linear-gradient(-45deg, $bg 0rem, $bg 0.3rem, $secondary 0.3rem, $secondary 0.4rem);
+    // background: repeating-linear-gradient(-45deg, $accent 0rem, $accent 0.5rem, $bg 0.5rem, $bg 0.6rem);
+    background-color: $accent;
     background-size: 50px 50px;
 }
 
@@ -42,12 +43,12 @@ nav {
     background-color: $nav;
 }
 
-h1 {
+h1, h3 {
     color: $primary;
 }
 
 h2 {
-    color: $accent;
+    color: $secondary;
 }
 
 
@@ -60,8 +61,12 @@ h2 {
         box-shadow: 0.2rem 0.2rem 0.5rem $primary;
         a {
             &:hover {
-                color: $bg;
                 background-color: $primary;
+            }
+
+            &:hover h3 {
+                color: $bg;
+                font-weight: 600;
             }
         }
     }
@@ -71,6 +76,7 @@ h2 {
     border-bottom: $border0;
     border-right: $border0;
     border-left: $border0;
+    box-shadow: 0 0.7rem 0.8rem $shadow;
 }
 #scroll-spy {
     background-color: $tread;
@@ -87,11 +93,11 @@ h2 {
 }
 
 .go-down {
-    background: url('./icons/chevron-down-solid-light.svg');
+    background: url('./icons/chevron-down-solid.svg');
 }
 
 .go-up {
-    background: url('./icons/chevron-up-solid-light.svg');
+    background: url('./icons/chevron-up-solid.svg');
 }
 
 
