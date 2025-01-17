@@ -18,7 +18,7 @@
 }
 
 nav {
-  background-color: #fff;
+  background-color: transparent;
 }
 
 h1, h3 {
@@ -50,7 +50,7 @@ h2 {
 }
 
 #scroll-spy {
-  background-color: #003049;
+  background-color: #ee4266;
 }
 
 .interval {
@@ -58,9 +58,13 @@ h2 {
 }
 
 .page {
-  background-color: #fff;
+  background-color: transparent;
   border: 0.1rem solid #d62828;
   box-shadow: -0.1rem -0.1rem 1rem #000;
+}
+
+.home-image {
+  border: 0.2rem dashed #000;
 }
 
 .go-down {

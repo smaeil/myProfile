@@ -57,7 +57,6 @@ h2 {
 nav {
     position: fixed;
     top: 0; left: 0; right: 0;
-    backdrop-filter: blur(0.3rem);
     z-index: 99;
 
     div > h3 {
@@ -70,6 +69,14 @@ nav {
     }
 }
 
+#canvas {
+    position: absolute;
+    left: 0; top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent;
+    z-index: -1;
+}
 
 
 
@@ -238,6 +245,11 @@ nav {
 
 .top {
     z-index: 5 !important;
+}
+
+
+.home-image {
+    width: 100%;
 }
 
 // helper: **************************************************

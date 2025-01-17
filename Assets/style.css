@@ -40,8 +40,6 @@ nav {
   top: 0;
   left: 0;
   right: 0;
-  -webkit-backdrop-filter: blur(0.3rem);
-          backdrop-filter: blur(0.3rem);
   z-index: 99;
 }
 nav div > h3 {
@@ -51,6 +49,16 @@ nav div > h3 {
 nav .container {
   height: -moz-max-content;
   height: max-content;
+}
+
+#canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: transparent;
+  z-index: -1;
 }
 
 .container, #scroll-spy-container {
@@ -196,6 +204,10 @@ nav .container {
 
 .top {
   z-index: 5 !important;
+}
+
+.home-image {
+  width: 100%;
 }
 
 @keyframes menu-fade-down {

@@ -4,8 +4,12 @@
 $primary: #000;
 $secondary: #d62828;
 $bg: #fff;
+$alterBg: #e5e5e5;
 $accent: #f77f00;
-$tread: #003049;
+$tread: #ee4266;
+$counterAccent: #003049;
+
+
 $shadow: #00000033;
 $nav: $bg;
 
@@ -40,7 +44,7 @@ $border1: 1px dashed $primary;
 // Elements: ***************************************************
 
 nav {
-    background-color: $nav;
+    background-color: transparent;
 }
 
 h1, h3 {
@@ -87,9 +91,13 @@ h2 {
 }
 
 .page {
-    background-color: $bg;
+    background-color: transparent;
     border: 0.1rem solid $secondary;
     box-shadow: -0.1rem -0.1rem 1rem $primary;
+}
+
+.home-image {
+    border: 0.2rem dashed $primary;
 }
 
 .go-down {
