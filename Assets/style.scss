@@ -222,6 +222,13 @@ nav {
     }
 }
 
+.content-holder {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: scroll;
+}
+
 
 // navigations
 .go-down, .go-up {
@@ -249,7 +256,11 @@ nav {
 
 
 .home-image {
-    width: 100%;
+    width: 98%;
+    height: 70vh;
+    background-image: url('./images/homeImg.jpeg');
+    background-size:cover;
+    background-repeat: no-repeat;
 }
 
 // helper: **************************************************
@@ -286,6 +297,10 @@ nav {
 
     .profile-photo {
         margin-top: 0.5rem !important;
+    }
+
+    .content {
+        height: auto;
     }
     
 }
@@ -350,4 +365,20 @@ nav {
     :root {
         font-size: 16px;
     }    
+}
+
+
+// Screen orientation
+@media screen and (min-aspect-ratio: 1/1) {
+    // content holder
+    .content-holder {
+        flex-direction: row;
+    }
+
+    // home image 
+    .home-image {
+        margin-right: 1rem;
+        max-width: 50vh;
+        height: 98%;
+    }
 }

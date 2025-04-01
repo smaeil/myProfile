@@ -184,6 +184,13 @@ nav .container {
   align-self: center;
 }
 
+.content-holder {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: scroll;
+}
+
 .go-down, .go-up {
   width: 1.9rem;
   height: 1.9rem;
@@ -207,7 +214,11 @@ nav .container {
 }
 
 .home-image {
-  width: 100%;
+  width: 98%;
+  height: 70vh;
+  background-image: url("./images/homeImg.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 @keyframes menu-fade-down {
@@ -242,6 +253,9 @@ nav .container {
   }
   .profile-photo {
     margin-top: 0.5rem !important;
+  }
+  .content {
+    height: auto;
   }
 }
 @media only screen and (min-width: 600px) {
@@ -281,5 +295,15 @@ nav .container {
 @media only screen and (min-width: 1200px) {
   :root {
     font-size: 16px;
+  }
+}
+@media screen and (min-aspect-ratio: 1/1) {
+  .content-holder {
+    flex-direction: row;
+  }
+  .home-image {
+    margin-right: 1rem;
+    max-width: 50vh;
+    height: 98%;
   }
 }/*# sourceMappingURL=style.css.map */
