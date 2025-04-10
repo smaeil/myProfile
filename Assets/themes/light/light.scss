@@ -2,17 +2,21 @@
 
 // colors:
 $primary: #000;
-$secondary: #d62828;
+$secondary: #aa0000;
 $bg: #fff;
 $alterBg: #e5e5e5;
-$accent: #f77f00;
+$accent: #aa0000;
 $tread: #ee4266;
 $counterAccent: #003049;
 
 
 $shadow: #00000033;
+$shadow2: #00000099;
 $nav: $bg;
 
+.secondary {
+    color: $secondary;
+}
 
 // borders:
 $border0: 1px solid $primary;
@@ -36,7 +40,6 @@ $border1: 1px dashed $primary;
 }
 .profile-photo-shadow {
     border: $border0;
-    // background: repeating-linear-gradient(-45deg, $accent 0rem, $accent 0.5rem, $bg 0.5rem, $bg 0.6rem);
     background-color: $accent;
     background-size: 50px 50px;
 }
@@ -97,7 +100,12 @@ h2 {
 }
 
 .home-image {
-    border: 0.2rem dashed $primary;
+    border: 0.01rem solid $shadow;
+    animation: moving-shadow 11s linear 0s infinite alternate none;
+}
+
+.map-image {
+    background-image: url('./icons/de.svg');
 }
 
 .go-down {
@@ -116,3 +124,18 @@ h2 {
     background-position: center;
 }
 
+.skill-container {
+    border: $border1;
+    background-blend-mode: color;
+}
+
+
+// animations: **************************************************
+
+@keyframes moving-shadow {
+    0% {box-shadow: 1rem 1rem 1rem $shadow;}
+    25% {box-shadow: 1rem -1rem 1rem $shadow;}
+    50% {box-shadow: -1rem -1rem 1rem $shadow2;}
+    75% {box-shadow: -1rem 1rem 1rem $shadow2;}
+    100% {box-shadow: 1rem 1rem 1rem $shadow;}
+}

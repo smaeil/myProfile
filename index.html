@@ -67,9 +67,9 @@
             <div></div>
             <div class="content-holder">
 
-                <div class="home-image">
-    
-                </div>
+                <!-- home image -->
+                <div class="home-image"></div>
+
                 <div>
                     <h1>Ismail AHMADI</h1>
                     <h2>Full Stack Webdeveloper</h2>
@@ -87,15 +87,20 @@
             <a onclick="getPage('home')"><div class="go-up"></div></a>
 
             <div class="content-holder">
-                <h2>About Me</h2>
-                <br>
-                <p>
-                    Full-stack web developer with near 9 years of experience in database and humanitarian data collection management.
-                      Seeking a new challenge to integrate, apply, and advance knowledge from both database and web development in. a solution-oriented manner.
-                </p>
 
-                <h4>Education: Civil Engineering</h4>
-                <h4>Location: Baden Württemberg, Germany</h4>
+                <div>
+                    <h2>About Me</h2>
+                    <br>
+                    <p>
+                        Full-stack web developer with near 9 years of experience in database and humanitarian data collection management.
+                        Seeking a new challenge to integrate, apply, and advance knowledge from both database and web development in a solution-oriented manner.
+                    </p>
+
+                    <h4 class="secondary">Location: 73733 Esslingen am Neckar, Baden Württemberg, Germany</h4>
+                </div>
+                
+                <div class="map-image"></div>
+
 
             </div>
 
@@ -108,10 +113,96 @@
         <div class="container">
             <a onclick="getPage('about-me')"><div class="go-up"></div></a>
 
-            <div class="content-holder">
-                <h2>Skills</h2>
-                here I show my skill with graphic and animation
+            <h2>Skills</h2>
+            <br><br>
+            
+            <div class="skills">
+
+                <div class="skill-container">
+                    <h4>Web Development:</h4>
+                    <div class="sub-skill-container">
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>SASS</li>
+                            <li>JavaScript</li>
+                            <li>TypeScript</li>
+                            <li>ReactJS</li>
+                            <li>Angular</li>
+                            <li>VueJS</li>
+                            <li>BootStrap</li>
+                            <li>TailwindCSS</li>
+                            <li>NodeJS</li>
+                        </ul>
+                        <div>
+                            <img src="./Assets/images/html-1.svg" alt="html" class="icon2">
+                            <img src="./Assets/images/css-3.svg" alt="css" class="icon2">
+                            <img src="./Assets/images/sass-1.svg" alt="sass" class="icon2">
+                            <img src="./Assets/images/javascript-r.svg" alt="javaScript" class="icon2">
+                            <img src="./Assets/images/typescript.svg" alt="typeScript" class="icon2">
+                            <img src="./Assets/images/react-2.svg" alt="react" class="icon2">
+                            <img src="./Assets/images/angular-icon-1.svg" alt="angular" class="icon2">
+                            <img src="./Assets/images/vue-9.svg" alt="vue" class="icon2">
+                            <img src="./Assets/images/bootstrap-4.svg" alt="bootstrap" class="icon2">
+                            <img src="./Assets/images/tailwindcss.svg" alt="tailwindcss" class="icon2">
+                            <img src="./Assets/images/nodejs.svg" alt="nodejs" class="icon2">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="skill-container">
+                    <h4>Data and Database:</h4>
+                    <div class="sub-skill-container">
+                        <ul>
+                            <li>MS Excell</li>
+                            <li>MongoDB</li>
+                            <li>PostgreSQL</li>
+                        </ul>
+                        <div>
+                            <img src="./Assets/images/excel.svg" alt="excell" class="icon2">
+                            <img src="./Assets/images/mongodb.svg" alt="mongodb" class="icon2">
+                            <img src="./Assets/images/postgresql.svg" alt="postgresql" class="icon2">
+                        </div>
+                    </div>
+                </div>
+                
+
+                <div class="skill-container">
+                    <h4>Project development</h4>
+                    <div class="sub-skill-container">
+                        <ul>
+                            <li>Git</li>
+                            <li>Agile Development</li>
+                        </ul>
+                        <div>
+                            <img src="./Assets/images/git.svg" alt="git" class="icon2">
+                            <img src="./Assets/images/agile.png" alt="agiledev" class="icon2">
+                        </div>
+                    </div>
+                </div>                
+
+                <div class="skill-container">
+                    <h4>Graphic and Mapping</h4>
+                    <div class="sub-skill-container">
+                        <ul>
+                            <li>Adobe Photoshop</li>
+                            <li>QGIS</li>
+                            <li>GeoServer</li>
+                            <li>Leaflet</li>
+                        </ul>
+                        <div>
+                            <img src="./Assets/images/photoshop.svg" alt="photoshop" class="icon2">
+                            <img src="./Assets/images/QGIS.png" alt="qgis" class="icon2">
+                            <img src="./Assets/images/GeoServer.png" alt="GeoServer" class="icon2">
+                            <img src="./Assets/images/Leaflet.png" alt="Leaflet" class="icon2">
+                        </div>
+                    </div>
+                </div>
+
+                
             </div>
+
 
             <a onclick="getPage('projects')"><div class="go-down"></div></a>
         </div>
@@ -122,7 +213,7 @@
         <div class="container">
             <a onclick="getPage('skills')"><div class="go-up"></div></a>
 
-            <div class="content-holder">
+            <div class="content-holder column">
                 <h2>Projects</h2>
                 My project will be projected here
             </div>
@@ -136,7 +227,7 @@
         <div class="container">
             <a onclick="getPage('projects')"><div class="go-up"></div></a>
 
-            <div class="content-holder">
+            <div class="content-holder column">
                 <h2>Contact</h2>
             </div>
 

@@ -32,7 +32,12 @@ h1 {
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 3rem;
+  font-weight: 200;
+}
+
+p {
+  margin: 1rem 0;
 }
 
 nav {
@@ -71,7 +76,7 @@ nav .container {
 }
 
 .column {
-  flex-direction: column;
+  flex-direction: column !important;
 }
 
 .justify-between {
@@ -92,6 +97,11 @@ nav .container {
   margin: 1rem;
 }
 
+.icon2 {
+  height: 2rem;
+  margin: 0.7rem;
+}
+
 .icon-home {
   background-size: contain;
   position: fixed;
@@ -106,6 +116,7 @@ nav .container {
   width: 4rem;
   margin-top: 0.4rem;
   position: absolute;
+  border-radius: 0 0 1rem;
 }
 
 .profile-photo-shadow {
@@ -114,6 +125,7 @@ nav .container {
   margin-top: 1.4rem;
   margin-left: 1rem;
   position: absolute;
+  border-radius: 0 0 1rem;
 }
 
 .dropdown .menu-btn {
@@ -178,6 +190,7 @@ nav .container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow: auto;
 }
 .page .container a {
   display: block;
@@ -188,7 +201,7 @@ nav .container {
   display: flex;
   flex-direction: column;
   height: 100%;
-  overflow: scroll;
+  overflow: visible;
 }
 
 .go-down, .go-up {
@@ -219,6 +232,45 @@ nav .container {
   background-image: url("./images/homeImg.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.map-image {
+  width: 90%;
+  height: 40vh;
+  margin-top: 4rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.4rem;
+  overflow: scroll;
+}
+
+.skill-container {
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+  -webkit-backdrop-filter: blur(1rem);
+          backdrop-filter: blur(1rem);
+}
+.skill-container h4 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.8rem;
+  margin-left: 2rem;
+}
+.skill-container .sub-skill-container {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding-left: 2rem;
+}
+.skill-container .sub-skill-container ul li {
+  line-height: 1.5rem;
+}
+.skill-container .sub-skill-container div {
+  height: 100%;
 }
 
 @keyframes menu-fade-down {
@@ -268,7 +320,7 @@ nav .container {
 }
 @media only screen and (min-width: 900px) {
   :root {
-    font-size: 16px;
+    font-size: 18px;
   }
   nav div > h3 {
     padding: 1rem;
@@ -294,15 +346,17 @@ nav .container {
 }
 @media only screen and (min-width: 1200px) {
   :root {
-    font-size: 16px;
+    font-size: 22px;
   }
 }
 @media screen and (min-aspect-ratio: 1/1) {
   .content-holder {
     flex-direction: row;
+    justify-content: space-around !important;
+    align-items: center;
   }
   .home-image {
-    margin-right: 1rem;
+    margin-right: 2rem;
     max-width: 50vh;
     height: 98%;
   }
