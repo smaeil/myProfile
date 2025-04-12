@@ -332,7 +332,7 @@ nav .container {
 
 .home-image {
   width: 98%;
-  height: 70vh;
+  height: 60vh;
   background-image: url("./images/homeImg.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
