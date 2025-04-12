@@ -13,7 +13,7 @@ const tr = {
             navThemesDark: 'Karanlık'
         },
         home: {
-            homeh1: 'İsmail Ahmedi',
+            homeh1: 'İsmail Ahmadi',
             homeh2: 'Tam Yığın Web Geliştirici'
         },
         about: {

@@ -87,6 +87,15 @@ i {
   background-size: contain;
   background-position: center;
 }
+.go-down i:hover, .go-up i:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+}
+
+.icon-home i:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+}
 
 .skill-container {
   border: 1px dashed #000;

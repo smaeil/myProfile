@@ -10,6 +10,11 @@
     
 }
 
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
 body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -76,6 +81,7 @@ a {
 
 // headings:
 h1 {
+    margin-top: 0.7rem;
     font-size: 5rem;
 }
 
@@ -100,6 +106,7 @@ nav {
 
     .container {
         height: max-content;
+        box-sizing: border-box;
     }
 }
 
@@ -110,12 +117,12 @@ nav {
     position: relative;
     justify-content: center;
     align-items: center;
-    margin: 0 0.1rem;
+    margin: 0 0.2rem 0.2rem 0;
 }
 
 .select-box {
     appearance: none;
-    padding: 0.4rem 3.2rem 0.3rem 1.1rem;
+    padding: 0.4rem 3rem 0.3rem 0.8rem;
     font-size: 1.2rem;
 }
 
@@ -174,6 +181,10 @@ nav {
     align-items: center ;
 }
 
+.overflow-show {
+    overflow: visible !important;
+}
+
 .icon {
     width: $icon1;
     height: $icon1;
@@ -202,23 +213,27 @@ nav {
     right: 1rem;
     animation: breath 2s ease-in-out 0s infinite alternate none;
     i {
+        padding: 1rem;
+        border-radius: 0.3rem;
         font-size: 2.3rem;
     }
 }
 
 .profile-photo {
-    height: 4rem;
-    width: 4rem;
-    margin-top: 0.4rem;
+    height: 3.5rem;
+    width: 3.5rem;
+    // margin-top: 4rem;
     position: absolute;
+    top: 1rem;
 }
 
 .profile-photo-shadow {
-    height: 4rem;
-    width: 4rem;
-    margin-top: 1.4rem;
+    height: 3.5rem;
+    width: 3.5rem;
+    // margin-top: 1.4rem;
     margin-left: 1rem;
     position: absolute;
+    top: 2.4rem;
     border-radius: 0 0 1rem;
     background-image: url('./images/back2.png');
     background-size: cover !important;
@@ -332,6 +347,8 @@ nav {
     z-index: 10;
 
     i {
+        padding: 1rem;
+        border-radius: 0.3rem;
         font-size: 1.7rem;
     }
 }
@@ -462,11 +479,36 @@ nav {
 
 // Media: ***********************************************************************************************************
 
+// extra small screens
+@media only screen and (max-width: 374px){
+
+    // make the font smaller
+    :root {
+        font-size: 12px;
+    }
+
+    h1 {
+        font-size: 3.3rem;
+    }
+
+    h1 + h2 {
+        font-size: 2rem;
+    }
+    
+}
 // small screens
 @media only screen and (min-width: 375px) {
     // make the fonts smaller
     :root {
         font-size: 12px;
+    }
+
+    h1 {
+        font-size: 3.4rem;
+    }
+
+    h1 + h2 {
+        font-size: 2.28rem;
     }
 
     .profile-photo {
@@ -486,6 +528,14 @@ nav {
         font-size: 14px;
     }
 
+    h1 {
+        font-size: 5rem;
+    }
+
+    h1 + h2 {
+        font-size: 3.3rem;
+    }
+
     .profile-photo {
         margin-top: 1rem;
     }
@@ -496,6 +546,14 @@ nav {
     // base font size
     :root {
         font-size: 16px;
+    }
+
+    h1 {
+        font-size: 6rem;
+    }
+
+    h1 + h2 {
+        font-size: 4rem;
     }
 
     // navbar:
@@ -542,7 +600,16 @@ nav {
     // base font size
     :root {
         font-size: 18px;
-    }    
+    }
+    
+    h1 {
+        font-size: 6rem;
+    }
+
+    h1 + h2 {
+        font-size: 4rem;
+    }
+
 }
 
 

@@ -122,6 +122,21 @@ i {
     background-repeat: no-repeat;
     background-size:contain;
     background-position: center;
+    i {
+        &:hover {
+            background-color: $shadow2;
+            color: $bg;
+        }
+    }
+}
+
+.icon-home {
+    i {
+        &:hover {
+            background-color: $shadow2;
+            color: $bg;
+        }
+    }
 }
 
 .skill-container {

@@ -7,7 +7,7 @@ const fa = {
         nav: {
             navAbout: 'درباره من',
             navSkills: 'مهارت‌ها',
-            navProjects: 'پروزه‌ها',
+            navProjects: 'پروژه‌ها',
             navContact: 'تماس',
             navThemesLight: 'روشن',
             navThemesDark: 'تاریک'
