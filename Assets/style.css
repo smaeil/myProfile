@@ -56,6 +56,36 @@ nav .container {
   height: max-content;
 }
 
+.select-container {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0.2rem;
+}
+
+.select-box {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  padding: 0.3rem 3rem 0.3rem 1.2rem;
+  font-size: 1.2rem;
+}
+
+#themes {
+  border-radius: 1.2rem 0 0 1.2rem;
+}
+
+.select-container .icon-container {
+  width: 1.2rem;
+  height: 100%;
+  position: absolute;
+  right: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
 #canvas {
   position: absolute;
   left: 0;
@@ -84,7 +114,7 @@ nav .container {
 }
 
 .justify-center {
-  justify-content: center;
+  justify-content: center !important;
 }
 
 .align-center {
@@ -94,21 +124,33 @@ nav .container {
 .icon {
   width: 1.9rem;
   height: 1.9rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 1rem;
+}
+.icon i {
+  font-size: 2rem;
 }
 
 .icon2 {
   height: 2rem;
   margin: 0.7rem;
+  background-repeat: no-repeat !important;
 }
 
 .icon-home {
-  background-size: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   z-index: 999;
   bottom: 1rem;
   right: 1rem;
   animation: breath 2s ease-in-out 0s infinite alternate none;
+}
+.icon-home i {
+  font-size: 2.3rem;
 }
 
 .profile-photo {
@@ -116,7 +158,6 @@ nav .container {
   width: 4rem;
   margin-top: 0.4rem;
   position: absolute;
-  border-radius: 0 0 1rem;
 }
 
 .profile-photo-shadow {
@@ -126,10 +167,15 @@ nav .container {
   margin-left: 1rem;
   position: absolute;
   border-radius: 0 0 1rem;
+  background-image: url("./images/back2.png");
+  background-size: cover !important;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .dropdown .menu-btn {
   margin: 0 0.7rem;
+  font-size: 1.6rem;
 }
 .dropdown .dropdown-content {
   animation: menu-fade-down 0.5s ease;
@@ -138,6 +184,7 @@ nav .container {
   flex-direction: column;
   border-radius: 0.3rem;
   transition-duration: 1s;
+  z-index: 999;
 }
 .dropdown .dropdown-content a {
   padding: 0.7rem 2.2rem;
@@ -208,6 +255,21 @@ nav .container {
   width: 1.9rem;
   height: 1.9rem;
   animation: breath 2s ease-in-out 0s infinite alternate none;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+.go-down i, .go-up i {
+  font-size: 1.7rem;
+}
+
+.go-down {
+  bottom: 1.5rem;
+}
+
+.go-up {
+  top: 7rem;
 }
 
 .hide {
@@ -246,7 +308,7 @@ nav .container {
   display: grid;
   grid-template-columns: 1fr;
   gap: 0.4rem;
-  overflow: scroll;
+  overflow: visible;
 }
 
 .skill-container {
@@ -258,19 +320,33 @@ nav .container {
 .skill-container h4 {
   margin-top: 1.5rem;
   margin-bottom: 0.8rem;
-  margin-left: 2rem;
+  margin-left: 1rem;
 }
 .skill-container .sub-skill-container {
   display: flex;
   align-items: center;
   box-sizing: border-box;
-  padding-left: 2rem;
+}
+.skill-container .sub-skill-container ul {
+  width: 9rem;
+  padding-left: 0.5rem;
 }
 .skill-container .sub-skill-container ul li {
-  line-height: 1.5rem;
+  margin: 0 1rem 0.3rem 2rem;
 }
 .skill-container .sub-skill-container div {
   height: 100%;
+}
+
+.project-card {
+  margin: 4rem 0;
+}
+.project-card h3 {
+  font-size: 1.6rem;
+}
+
+.contact-card {
+  margin: 5rem 0;
 }
 
 @keyframes menu-fade-down {
@@ -299,6 +375,11 @@ nav .container {
     transform: translateY(0) rotate(0deg);
   }
 }
+@keyframes typing {
+  0% {
+    width: 0%;
+  }
+}
 @media only screen and (min-width: 375px) {
   :root {
     font-size: 12px;
@@ -320,7 +401,7 @@ nav .container {
 }
 @media only screen and (min-width: 900px) {
   :root {
-    font-size: 18px;
+    font-size: 16px;
   }
   nav div > h3 {
     padding: 1rem;
@@ -336,6 +417,7 @@ nav .container {
     display: flex;
     flex-direction: row;
     position: relative;
+    z-index: 999;
     background-color: transparent !important;
     border: none !important;
     box-shadow: none !important;
@@ -343,10 +425,13 @@ nav .container {
   .dropdown .dropdown-content a {
     padding: 1rem 0.6rem;
   }
+  .skills {
+    grid-template-columns: 1.5fr 1fr;
+  }
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1400px) {
   :root {
-    font-size: 22px;
+    font-size: 18px;
   }
 }
 @media screen and (min-aspect-ratio: 1/1) {

@@ -60,15 +60,29 @@ async function getPage(pageId) {
         inMove = true;
 
         if (!pageId) {
+            inMove = false;
             return;
         }
 
         const homeBtn = document.querySelector('#home-btn');
+        const nextBtn = document.querySelector('#next-btn');
+        const prevBtn = document.querySelector('#prev-btn');
 
+        // hiding the home and prev buttons on first page (home page)
         if (pageId === 'home') {
             homeBtn.classList.add('hide');
+            prevBtn.classList.add('hide');
         } else {
             homeBtn.classList.remove('hide');
+            prevBtn.classList.remove('hide');
+        }
+
+        // hiding the next button on last page
+
+        if (pageId === 'contact') {
+            nextBtn.classList.add('hide');
+        } else {
+            nextBtn.classList.remove('hide');
         }
 
 
@@ -152,6 +166,24 @@ async function getPage(pageId) {
     }
 }
 
+async function turnPage(direction) {
+    try {
+        let target;
+
+        if (direction === 'next') {
+            target = pagesCollection[currentPageIndex + 1].id;
+        } else {
+            target = pagesCollection[currentPageIndex - 1].id;
+        }
+
+        await getPage(target);
+        return;
+
+    } catch (error) {
+        console.log('navigation error');
+    }
+}
+
 
 // Page contents: ***********************************************
 
@@ -194,23 +226,13 @@ window.addEventListener('click', e => {
 
 // Handle window resize
 window.addEventListener('resize', () => {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    init();
     adjustRuler();
   });
   
-  window.addEventListener('mouseout', () => {
-      mouse.x = undefined;
-      mouse.y = undefined;
-  });
+
 
 // a small interval for fixing things
 setInterval(() => {
     inMove = false;
 },1000);
 
-
-
-// Initialize and start animation
-init();

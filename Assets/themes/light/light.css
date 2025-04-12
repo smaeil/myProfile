@@ -2,13 +2,8 @@
   color: #aa0000;
 }
 
-.icon-menu {
-  background-image: url("./icons/bars-solid.svg");
-  background-size: contain;
-}
-
-.icon-home {
-  background-image: url("./icons/house-solid.svg");
+.map-image {
+  background-image: url("./icons/de.svg");
 }
 
 .profile-photo {
@@ -17,7 +12,6 @@
 
 .profile-photo-shadow {
   border: 1px solid #000;
-  background-color: #aa0000;
   background-size: 50px 50px;
 }
 
@@ -33,6 +27,10 @@ h2 {
   color: #aa0000;
 }
 
+i {
+  color: #000;
+}
+
 .dropdown .dropdown-content {
   background-color: #fff;
   border: 1px dashed #000;
@@ -44,6 +42,17 @@ h2 {
 .dropdown .dropdown-content a:hover h3 {
   color: #fff;
   font-weight: 600;
+}
+
+.select-box {
+  border: 0.01rem solid #000;
+  box-shadow: inset 0.2rem 0.2rem 0.3rem rgba(0, 0, 0, 0.6);
+  background-color: #eeeeee;
+  color: #000;
+}
+.select-box option {
+  background-color: #fff;
+  color: #000;
 }
 
 #scroll-spy-container {
@@ -72,18 +81,6 @@ h2 {
   animation: moving-shadow 11s linear 0s infinite alternate none;
 }
 
-.map-image {
-  background-image: url("./icons/de.svg");
-}
-
-.go-down {
-  background: url("./icons/chevron-down-solid.svg");
-}
-
-.go-up {
-  background: url("./icons/chevron-up-solid.svg");
-}
-
 .go-down, .go-up {
   background-color: transparent;
   background-repeat: no-repeat;
@@ -94,6 +91,16 @@ h2 {
 .skill-container {
   border: 1px dashed #000;
   background-blend-mode: color;
+}
+
+.project-card h3 {
+  color: #aa0000;
+}
+.project-card a {
+  color: #aa0000;
+}
+.project-card b {
+  color: #000 !important;
 }
 
 @keyframes moving-shadow {

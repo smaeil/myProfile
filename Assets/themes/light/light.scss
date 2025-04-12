@@ -4,8 +4,8 @@
 $primary: #000;
 $secondary: #aa0000;
 $bg: #fff;
-$alterBg: #e5e5e5;
-$accent: #aa0000;
+$alterBg: #eeeeee;
+$accent: #4f4f4f;
 $tread: #ee4266;
 $counterAccent: #003049;
 
@@ -24,23 +24,20 @@ $border1: 1px dashed $primary;
 
 
 
-// icons
+// icons : ***********************************************************
 
-.icon-menu {
-    background-image: url('./icons/bars-solid.svg');
-    background-size: contain;
+
+.map-image {
+    background-image: url('./icons/de.svg');
 }
 
-.icon-home {
-    background-image: url('./icons/house-solid.svg');
-}
 
 .profile-photo {
     border: $border0;
 }
 .profile-photo-shadow {
     border: $border0;
-    background-color: $accent;
+    // background-color: $accent;
     background-size: 50px 50px;
 }
 
@@ -58,6 +55,9 @@ h2 {
     color: $secondary;
 }
 
+i {
+    color: $primary;
+}
 
 // Classes : ****************************************************
 
@@ -76,6 +76,19 @@ h2 {
                 font-weight: 600;
             }
         }
+    }
+}
+
+.select-box {
+    border: 0.01rem solid $primary;
+    // border:none;
+    box-shadow: inset 0.2rem 0.2rem 0.3rem $shadow2;
+    background-color: $alterBg;
+    color: $primary;
+
+    option {
+        background-color: $bg;
+        color: $primary;
     }
 }
 
@@ -104,18 +117,6 @@ h2 {
     animation: moving-shadow 11s linear 0s infinite alternate none;
 }
 
-.map-image {
-    background-image: url('./icons/de.svg');
-}
-
-.go-down {
-    background: url('./icons/chevron-down-solid.svg');
-}
-
-.go-up {
-    background: url('./icons/chevron-up-solid.svg');
-}
-
 
 .go-down, .go-up {
     background-color: transparent;
@@ -127,6 +128,18 @@ h2 {
 .skill-container {
     border: $border1;
     background-blend-mode: color;
+}
+
+.project-card {
+    h3 {
+        color: $secondary;
+    }
+    a {
+        color: $secondary;
+    }
+    b {
+        color: $primary !important;
+    }
 }
 
 
