@@ -5,15 +5,13 @@ const pagesCollection = document.querySelectorAll('.page');
 const pages = Array.from(pagesCollection);
 let currentPageIndex = 0;
 
-let particleColor = '#eaeaea';
 
-// themeData
-const themes = [
-    {name: 'light', src: './Assets/themes/light/light.css', particleColor: '#cccccc'}
-];
+
+
 
 // sounds:
 const flipCard = document.querySelector('#flip-card');
+const homeImg = document.querySelector('#home-img');
 
 
 
@@ -72,9 +70,11 @@ async function getPage(pageId) {
         if (pageId === 'home') {
             homeBtn.classList.add('hide');
             prevBtn.classList.add('hide');
+            homeImg.src = './Assets/images/pixlate2.png';
         } else {
             homeBtn.classList.remove('hide');
             prevBtn.classList.remove('hide');
+            homeImg.src = './Assets/images/stz.png';
         }
 
         // hiding the next button on last page

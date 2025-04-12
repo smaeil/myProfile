@@ -2,25 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="keywords" content="Webdeveloper, freelance, Baden-Wurttemberg">
+    <meta name="description" content="Ismail Ahmadi is a Webdeveloper in Baden Wurttemberg Germany">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./Assets/images/githubProfile.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./Assets/favicon.png" type="image/x-icon">
     <meta name="author" content="Ismail Ahmadi">
     <link rel="stylesheet" href="./Assets/style.css">
     <link rel="stylesheet" href="./Assets/themes/light/light.css" id="themes-selector">
     <link rel="stylesheet" href="./Assets/fontawsome/css/all.css">
     <title>Ismail Ahmadi</title>
 </head>
-<body>
+<body dir="ltr">
 
     <canvas id="canvas"></canvas>
 
     <!-- Navbar and all of its components -->
-    <nav>
+    <nav dir="ltr">
         <div class="container flex justify-between">
             <div>
                 <a onclick="getPage('home')" title="Go to Home">
                     <div class="profile-photo-shadow"></div>
-                    <img src="./Assets/images/githubProfile.png" class="profile-photo" alt="Home">
+                    <img src="./Assets/images/pixlate2.png" class="profile-photo" alt="Home" id="home-img">
                 </a>
             </div>
     
@@ -33,27 +35,27 @@
                     <div class="dropdown-content" id="nav-dropdown">
 
                         <a onclick="getPage('about-me')">
-                            <h3>About Me</h3>
+                            <h3 data-bind="navAbout" lang="en">About Me</h3>
                         </a>
 
                         <a onclick="getPage('skills')">
-                            <h3>Skills</h3>
+                            <h3 data-bind="navSkills" lang="en">Skills</h3>
                         </a>
 
                         <a onclick="getPage('projects')">
-                            <h3>Projects</h3>
+                            <h3 data-bind="navProjects" lang="en">Projects</h3>
                         </a>
 
                         <a onclick="getPage('contact')">
-                            <h3>Contact</h3> 
+                            <h3 data-bind="navContact" lang="en">Contact</h3> 
                         </a>
 
                     </div>
                 </div> 
                 <div class="select-container">
                     <select name="themes" id="themes" class="select-box">
-                        <option value="light">Light</option>
-                        <option value="dark">dark</option>
+                        <option value="light" data-bind="navThemesLight" lang="en">Light</option>
+                        <option value="dark" data-bind="navThemesDark" lang="en">dark</option>
                         <option value="desert">desert</option>
                         <option value="marine">marine</option>
                         <option value="gold">gold</option>
@@ -64,12 +66,12 @@
                 </div>
 
                 <div class="select-container">
-                    <select name="language" id="language" class="select-box">
-                        <option value="english">English</option>
-                        <option value="german">Deutsch</option>
-                        <option value="farsi">Dari/Farsi</option>
-                        <option value="arabic">Arabic</option>
-                        <option value="turkish">Turkish</option>
+                    <select name="language" id="language" class="select-box" onchange="changeLanguage(this.value)">
+                        <option value="english" lang="en">English</option>
+                        <option value="german" lang="de">Deutsch</option>
+                        <option value="farsi" lang="fa">دری/ فارسی</option>
+                        <option value="arabic" lang="ar">العربية</option>
+                        <option value="turkish" lang="tr">Türkçe</option>
                     </select>
                     <div class="icon-container" style="right: 1.6rem;">
                         <i class="fa-solid fa-language" style="font-size: 2rem;"></i>
@@ -96,8 +98,8 @@
                 <div class="home-image"></div>
 
                 <div>
-                    <h1>Ismail AHMADI</h1>
-                    <h2>Full Stack Webdeveloper</h2>
+                    <h1 data-bind="homeh1" lang="en">Ismail AHMADI</h1>
+                    <h2 data-bind="homeh2" lang="en">Full Stack Webdeveloper</h2>
 
                 </div>
 
@@ -112,14 +114,14 @@
             <div class="content-holder">
 
                 <div>
-                    <h2>About Me</h2>
+                    <h2 data-bind="abouth2" lang="en">About Me</h2>
                     <br>
-                    <p>
-                        Full-stack web developer with near 9 years of experience in database and humanitarian data collection management.
-                        Seeking a new challenge to integrate, apply, and advance knowledge from both database and web development in a solution-oriented manner.
+                    <p data-bind="aboutp" lang="en">
+                        I am a Full-stack web developer with near 9 years of experience in database development and humanitarian data collection management. 
+                        I am constantly Seeking for new challenges to integrate, apply, and advance my knowledge both in database and web development areas in a solution-oriented manner.
                     </p>
 
-                    <h4 class="secondary">Location: 73733 Esslingen am Neckar, Baden Württemberg, Germany</h4>
+                    <h4 class="secondary" data-bind="abouth4" lang="en">Location: 73733 Esslingen am Neckar, Baden Württemberg, Germany</h4>
                 </div>
                 
                 <div class="map-image"></div>
@@ -132,13 +134,13 @@
     <!-- Skills -->
     <section id="skills" class="page hide">
         <div class="container justify-center">
-            <h2 style="align-self: center;">Skills</h2>
+            <h2 style="align-self: center;" data-bind="skillsh2" lang="en">Skills</h2>
             <br><br>
             
             <div class="skills">
 
                 <div class="skill-container">
-                    <h4>Web Development:</h4>
+                    <h4 data-bind="skillsh4i1" lang="en">Web Development:</h4>
                     <div class="sub-skill-container">
                         <ul>
                             <li>HTML</li>
@@ -171,7 +173,7 @@
 
 
                 <div class="skill-container">
-                    <h4>Data and Database:</h4>
+                    <h4 data-bind="skillsh4i2" lang="en">Data and Database:</h4>
                     <div class="sub-skill-container">
                         <ul>
                             <li>MS Excell</li>
@@ -187,7 +189,7 @@
                 </div>
                 
                 <div class="skill-container">
-                    <h4>Graphic and Mapping</h4>
+                    <h4 data-bind="skillsh4i3" lang="en">Graphic and Mapping:</h4>
                     <div class="sub-skill-container">
                         <ul>
                             <li>Adobe Photoshop</li>
@@ -206,7 +208,7 @@
 
 
                 <div class="skill-container">
-                    <h4>Project development</h4>
+                    <h4  data-bind="skillsh4i4" lang="en">Project development:</h4>
                     <div class="sub-skill-container">
                         <ul>
                             <li>Git</li>
@@ -227,15 +229,15 @@
     <section id="projects" class="page hide">
         <div class="container">
             <div class="content-holder column">
-                <h2>Projects</h2>
+                <h2 data-bind="projectsh2" lang="en">Projects</h2>
                 <div class="project-card">
-                    <h3>Cryptogram</h3>
-                    <p>
+                    <h3 data-bind="projectsh3" lang="en">Cryptogram</h3>
+                    <p data-bind="projectsp" lang="en">
                         A cryptogram game, or simply cryptogram, is a type of puzzle that involves a piece of text encrypted using a simple letter substitution cipher. 
                         In a cryptogram game, the player's goal is to crack the code by identifying the substitution pattern and replacing the encrypted letters with the correct ones to reveal the original message.
                     </p>
-                    <a href="https://cryptogram-react.onrender.com" target="_blank"><p><b>Link: <i class="fa-solid fa-link"></i></b> https://cryptogram-react.onrender.com</p></a>
-                    <p><b>Used Technologies:</b> React, SASS</p>
+                    <a href="https://cryptogram-react.onrender.com" target="_blank"><p><b><span data-bind="projectsspan1" lang="en">Link: </span><i class="fa-solid fa-link"></i></b> https://cryptogram-react.onrender.com</p></a>
+                    <p><b><span data-bind="projectsspan2" lang="en">Used Technologies: </span></b> React, SASS</p>
                 </div>
                 <div></div>
             </div>
@@ -246,7 +248,7 @@
     <section id="contact" class="page hide">
         <div class="container">
             <div class="content-holder column">
-                <h2>Contact</h2>
+                <h2 data-bind="contacth2" lang="en">Contact</h2>
 
                 <div class="contact-card">
                     <a href="mailto:smaeil.ahmadi@gmail.com" target="_blank">
@@ -313,10 +315,21 @@
     </a>
 
     <!-- sound effects -->
-     <audio id="flip-card" controls style="visibility: hidden;">
+    <audio id="flip-card" controls style="visibility: hidden;">
         <source src="./Assets/sounds/card-flip-s.m4a" type="audio/mp4">
-     </audio>
+    </audio>
+    
+    <!-- Add new language files here at the end -->
+    <script src="./Assets/languages/en.js"></script>
+    <script src="./Assets/languages/de.js"></script>
+    <script src="./Assets/languages/fa.js"></script>
+    <script src="./Assets/languages/ar.js"></script>
+    <script src="./Assets/languages/tr.js"></script>
 
+
+    <!-- Scripts for wesite functionallities -->
+    <script src="./Assets/language.js"></script>
+    <script src="./Assets/theme.js"></script>
     <script src="./Assets/particle.js" async defer></script>
     <script src="./Assets/main.js" async defer></script>
 </body>

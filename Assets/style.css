@@ -5,7 +5,34 @@
 * {
   margin: 0;
   padding: 0;
+}
+
+body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+@font-face {
+  font-family: "B Mitra";
+  src: url("./fonts/bmitra.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "noto kufi";
+  src: url("./fonts/noto_kufi_arabic/NotoKufiArabic-VariableFont_wght.woff2") format("woff2");
+  font-weight: normal;
+  font-display: swap;
+}
+[lang=en], [lang=de], [lang=tr] {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif !important;
+}
+
+[lang=ar], [lang=fa] {
+  font-family: "noto kufi", sans-serif !important;
+}
+[lang=ar] h1, [lang=fa] h1 {
+  font-weight: 900;
 }
 
 html {
@@ -61,14 +88,14 @@ nav .container {
   position: relative;
   justify-content: center;
   align-items: center;
-  margin: 0 0.2rem;
+  margin: 0 0.1rem;
 }
 
 .select-box {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  padding: 0.3rem 3rem 0.3rem 1.2rem;
+  padding: 0.4rem 3.2rem 0.3rem 1.1rem;
   font-size: 1.2rem;
 }
 
@@ -373,11 +400,6 @@ nav .container {
   }
   to {
     transform: translateY(0) rotate(0deg);
-  }
-}
-@keyframes typing {
-  0% {
-    width: 0%;
   }
 }
 @media only screen and (min-width: 375px) {
