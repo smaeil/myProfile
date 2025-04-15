@@ -10,7 +10,8 @@ const tr = {
             navProjects: 'Projeler',
             navContact: 'İletişim',
             navThemesLight: 'Açık',
-            navThemesDark: 'Karanlık'
+            navThemesDark: 'Karanlık',
+            navThemesSunnySide: 'Güneşli taraf'
         },
         home: {
             homeh1: 'İsmail Ahmadi',

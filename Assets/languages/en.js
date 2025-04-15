@@ -10,7 +10,8 @@ const en = {
             navProjects: 'Projects',
             navContact: 'Contact',
             navThemesLight: 'Light',
-            navThemesDark: 'Dark'
+            navThemesDark: 'Dark',
+            navThemesSunnySide: 'Sunny Side'
         },
         home: {
             homeh1: 'Ismail AHMADI',

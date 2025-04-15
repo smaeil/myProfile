@@ -3,7 +3,7 @@
 }
 
 .map-image {
-  background-image: url("./icons/de.svg");
+  background-image: url("./de.svg");
 }
 
 .profile-photo {
@@ -13,6 +13,10 @@
 .profile-photo-shadow {
   border: 1px solid #000;
   background-size: 50px 50px;
+}
+
+body {
+  background-color: #fff;
 }
 
 nav {
@@ -28,6 +32,10 @@ h2 {
 }
 
 i {
+  color: #000;
+}
+
+p, li, h3, h4 {
   color: #000;
 }
 

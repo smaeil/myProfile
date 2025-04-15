@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="./Assets/favicon.png" type="image/x-icon">
     <meta name="author" content="Ismail Ahmadi">
     <link rel="stylesheet" href="./Assets/style.css">
-    <link rel="stylesheet" href="./Assets/themes/light/light.css" id="themes-selector">
+    <link rel="stylesheet" href="./Assets/themes/dark/dark.css" id="themes-selector">
     <link rel="stylesheet" href="./Assets/fontawsome/css/all.css">
     <title>Ismail Ahmadi</title>
 </head>
@@ -53,12 +53,10 @@
                     </div>
                 </div> 
                 <div class="select-container">
-                    <select name="themes" id="themes" class="select-box">
+                    <select name="themes" id="themes" class="select-box" onchange="changeTheme(this.value)">
                         <option value="light" data-bind="navThemesLight" lang="en">Light</option>
                         <option value="dark" data-bind="navThemesDark" lang="en">dark</option>
-                        <option value="desert">desert</option>
-                        <option value="marine">marine</option>
-                        <option value="gold">gold</option>
+                        <option value="sunnySide" data-bind="navThemesSunnySide" lang="en">Sunny Side</option>
                     </select>
                     <div class="icon-container">
                         <i class="fa-solid fa-palette" style="font-size: 1.3rem;"></i>

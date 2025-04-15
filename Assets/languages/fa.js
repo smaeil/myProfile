@@ -10,7 +10,8 @@ const fa = {
             navProjects: 'پروژه‌ها',
             navContact: 'تماس',
             navThemesLight: 'روشن',
-            navThemesDark: 'تاریک'
+            navThemesDark: 'تاریک',
+            navThemesSunnySide: 'آفتاب رخ'
         },
         home: {
             homeh1: 'اسماعیل احمدی',

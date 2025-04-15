@@ -10,7 +10,8 @@ const ar = {
             navProjects: 'المشاريع',
             navContact: 'اتصل بنا',
             navThemesLight: 'الضوء',
-            navThemesDark: 'المظلم'
+            navThemesDark: 'المظلم',
+            navThemesSunnySide: 'الجانب المشمس'
         },
         home: {
             homeh1: 'إسماعيل أحمدي',

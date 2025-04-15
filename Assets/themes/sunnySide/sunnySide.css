@@ -1,0 +1,139 @@
+.secondary {
+  color: #a30000;
+}
+
+.map-image {
+  background-image: url("./de.svg");
+}
+
+.profile-photo {
+  border: 1px solid #000000;
+}
+
+.profile-photo-shadow {
+  border: 1px solid #000000;
+  background-size: 50px 50px;
+}
+
+body {
+  background-color: #fff200;
+}
+
+nav {
+  background-color: transparent;
+}
+
+h1, h3 {
+  color: #000000;
+}
+
+h2 {
+  color: #a30000;
+}
+
+i {
+  color: #000000;
+}
+
+p, li, h3, h4 {
+  color: #000000;
+}
+
+.dropdown .dropdown-content {
+  background-color: #fff200;
+  border: 1px dashed #000000;
+  box-shadow: 0.2rem 0.2rem 0.5rem #000000;
+}
+.dropdown .dropdown-content a:hover {
+  background-color: #000000;
+}
+.dropdown .dropdown-content a:hover h3 {
+  color: #fff200;
+  font-weight: 600;
+}
+
+.select-box {
+  border: 0.01rem solid #000000;
+  box-shadow: inset 0.2rem 0.2rem 0.3rem rgba(255, 255, 255, 0.6);
+  background-color: #ff9900;
+  color: #000000;
+}
+.select-box option {
+  background-color: #fff200;
+  color: #000000;
+}
+
+#scroll-spy-container {
+  border-bottom: 1px solid #000000;
+  border-right: 1px solid #000000;
+  border-left: 1px solid #000000;
+  box-shadow: 0 0.7rem 0.8rem rgba(255, 255, 255, 0.2);
+}
+
+#scroll-spy {
+  background-color: #ff8c00;
+}
+
+.interval {
+  border-right: 1px solid #000000;
+}
+
+.page {
+  background-color: transparent;
+  border: 0.1rem solid #a30000;
+  box-shadow: -0.1rem -0.1rem 1rem #000000;
+}
+
+.home-image {
+  border: 0.01rem solid rgba(255, 255, 255, 0.2);
+  animation: moving-shadow 11s linear 0s infinite alternate none;
+}
+
+.go-down, .go-up {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.go-down i:hover, .go-up i:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+  color: #fff200;
+}
+
+.icon-home i:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+  color: #fff200;
+}
+
+.skill-container {
+  border: 1px dashed #000000;
+  background-blend-mode: color;
+}
+
+.project-card h3 {
+  color: #a30000;
+}
+.project-card a {
+  color: #a30000;
+}
+.project-card b {
+  color: #000000 !important;
+}
+
+@keyframes moving-shadow {
+  0% {
+    box-shadow: 1rem 1rem 1rem rgba(255, 255, 255, 0.2);
+  }
+  25% {
+    box-shadow: 1rem -1rem 1rem rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    box-shadow: -1rem -1rem 1rem rgba(255, 255, 255, 0.6);
+  }
+  75% {
+    box-shadow: -1rem 1rem 1rem rgba(255, 255, 255, 0.6);
+  }
+  100% {
+    box-shadow: 1rem 1rem 1rem rgba(255, 255, 255, 0.2);
+  }
+}/*# sourceMappingURL=sunnySide.css.map */

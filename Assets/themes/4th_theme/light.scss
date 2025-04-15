@@ -5,6 +5,7 @@ $primary: #000;
 $secondary: #aa0000;
 $bg: #fff;
 $alterBg: #eeeeee;
+$accent: #4f4f4f;
 $tread: #ee4266;
 $counterAccent: #003049;
 
@@ -36,14 +37,11 @@ $border1: 1px dashed $primary;
 }
 .profile-photo-shadow {
     border: $border0;
+    // background-color: $accent;
     background-size: 50px 50px;
 }
 
 // Elements: ***************************************************
-
-body {
-    background-color: $bg;
-}
 
 nav {
     background-color: transparent;
@@ -58,10 +56,6 @@ h2 {
 }
 
 i {
-    color: $primary;
-}
-
-p, li, h3, h4 {
     color: $primary;
 }
 
